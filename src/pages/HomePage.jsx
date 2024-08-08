@@ -1,15 +1,12 @@
 import { XIcon, GitHubIcon, LinkedinIcon } from "../components/Icons";
+import Footer from "../components/Footer";
+import Projects from "../components/Projects";
+import Header from "../components/Header";
 
 export default function HomePage() {
   return (
-    <div className="">
-      <div>
-        {/* avatar */}
-        <div>
-          <div className="h-10 w-10 rounded-full bg-cover bg-[url('/66465098.png')]"></div>
-        </div>
-      </div>
-
+    <div className="relative flex w-full flex-col text-left">
+      <Header />
       <main className="flex-auto">
         <div className="sm:px-8 mt-9">
           <div className="mx-auto w-full max-w-7xl lg:px-8">
@@ -44,7 +41,7 @@ export default function HomePage() {
                       class="group -m-1 p-1"
                       aria-label="Follow on Instagram"
                       href="#"
-                    >
+                  img  >
                       <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -91,44 +88,8 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-
-      <footer class="mt-32 flex-none">
-        <div class="sm:px-8">
-          <div class="mx-auto w-full max-w-7xl lg:px-8">
-            <div class="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
-              <div class="relative px-4 sm:px-8 lg:px-12">
-                <div class="mx-auto max-w-2xl lg:max-w-5xl">
-                  <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
-                    {/* <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 ">
-                      <a class="transition hover:text-teal-500" href="/about">
-                        About
-                      </a>
-                      <a
-                        class="transition hover:text-teal-500"
-                        href="/projects"
-                      >
-                        Projects
-                      </a>
-                      <a
-                        class="transition hover:text-teal-500"
-                        href="/speaking"
-                      >
-                        Speaking
-                      </a>
-                      <a class="transition hover:text-teal-500" href="/uses">
-                        Uses
-                      </a>
-                    </div> */}
-                    <p class="text-sm text-zinc-400">
-                      © Faraji Ombonya. All rights reserved.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Projects />
+      <Footer />
     </div>
   );
 }
