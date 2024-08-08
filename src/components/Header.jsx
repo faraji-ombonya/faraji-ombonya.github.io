@@ -32,7 +32,7 @@ export default function Header() {
                           class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
                           style={{ color: "transparent" }}
                           sizes="2.25rem"
-                          src="public/66465098.png"
+                          src="/66465098.png"
                         />
                       </a>
                     </div>
