@@ -37,7 +37,7 @@ export default function Projects() {
                   </div>
                   <h2 className="mt-6 text-base font-semibold text-zinc-800 ">
                     <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl /50"></div>
-                    <a href="http://planetaria.tech">
+                    <a href="https://github.com/faraji-ombonya/orion">
                       <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                       <span className="relative z-10">
                         Image Storage Service
