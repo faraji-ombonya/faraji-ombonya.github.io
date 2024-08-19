@@ -6,7 +6,7 @@ import Header from "../components/Header";
 export default function ProjectsPage() {
   return (
     <div className="relative flex w-full flex-col text-left">
-\      <Projects />
-\    </div>
+      <Projects />
+    </div>
   );
 }
