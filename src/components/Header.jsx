@@ -1,4 +1,8 @@
+import { useLocation, Link } from "react-router-dom";
+
 export default function Header() {
+  let location = useLocation();
+
   return (
     <header
       class="pointer-events-none relative z-50 flex flex-none flex-col"
@@ -21,7 +25,11 @@ export default function Header() {
                 <div class="relative flex gap-4">
                   <div class="flex flex-1">
                     <div class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur  ">
-                      <a aria-label="Home" class="pointer-events-auto" href="/">
+                      <Link
+                        aria-label="Home"
+                        class="pointer-events-auto"
+                        to="/"
+                      >
                         <img
                           alt=""
                           fetchpriority="high"
@@ -34,7 +42,7 @@ export default function Header() {
                           sizes="2.25rem"
                           src="/66465098.png"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div class="flex flex-1 justify-end md:justify-center">
@@ -85,46 +93,73 @@ export default function Header() {
                     <nav class="pointer-events-auto hidden md:block">
                       <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur   ">
                         <li>
-                          <a
-                            class="relative block px-3 py-2 transition hover:text-teal-500 "
-                            href="/about"
+                          <Link
+                            class={`relative block px-3 py-2 transition hover:text-teal-500  ${
+                              location.pathname == "/about" && "text-teal-500"
+                            } `}
+                            to="/about"
                           >
                             About
-                          </a>
+                            {location.pathname == "/about" && (
+                              <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
+                            )}
+                          </Link>
                         </li>
-                        <li>
-                          <a
-                            class="relative block px-3 py-2 transition hover:text-teal-500 "
-                            href="/articles"
+                        {/* <li>
+                          <Link
+                            class={`relative block px-3 py-2 transition hover:text-teal-500  ${
+                              location.pathname == "/articles" &&
+                              "text-teal-500"
+                            } `}
+                            to="/articles"
                           >
                             Articles
-                          </a>
-                        </li>
+                            {location.pathname == "/articles" && (
+                              <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
+                            )}
+                          </Link>
+                        </li> */}
                         <li>
-                          <a
-                            class="relative block px-3 py-2 transition text-teal-500 "
-                            href="/projects"
+                          <Link
+                            class={`relative block px-3 py-2 transition hover:text-teal-500  ${
+                              location.pathname == "/projects" &&
+                              "text-teal-500"
+                            } `}
+                            to="/projects"
                           >
                             Projects
-                            <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0  "></span>
-                          </a>
+                            {location.pathname == "/projects" && (
+                              <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
+                            )}
+                          </Link>
                         </li>
-                        <li>
-                          <a
-                            class="relative block px-3 py-2 transition hover:text-teal-500 "
-                            href="/speaking"
+                        {/* <li>
+                          <Link
+                            class={`relative block px-3 py-2 transition hover:text-teal-500  ${
+                              location.pathname == "/speaking" &&
+                              "text-teal-500"
+                            } `}
+                            to="/speaking"
                           >
                             Speaking
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="relative block px-3 py-2 transition hover:text-teal-500 "
-                            href="/uses"
+                            {location.pathname == "/speaking" && (
+                              <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
+                            )}
+                          </Link>
+                        </li> */}
+                        {/* <li>
+                          <Link
+                            class={`relative block px-3 py-2 transition hover:text-teal-500  ${
+                              location.pathname == "/uses" && "text-teal-500"
+                            } `}
+                            to="/uses"
                           >
                             Uses
-                          </a>
-                        </li>
+                            {location.pathname == "/uses" && (
+                              <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
+                            )}
+                          </Link>
+                        </li> */}
                       </ul>
                     </nav>
                   </div>
