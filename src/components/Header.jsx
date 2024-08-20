@@ -1,7 +1,18 @@
+import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 export default function Header() {
   let location = useLocation();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -48,14 +59,15 @@ export default function Header() {
                   <div class="flex flex-1 justify-end md:justify-center">
                     <div
                       class="pointer-events-auto md:hidden"
-                      data-headlessui-state=""
+                      data-headlessui-state="open"
                     >
                       <button
                         class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur    "
                         type="button"
                         aria-expanded="false"
-                        data-headlessui-state=""
+                        data-headlessui-state="open active"
                         id="headlessui-popover-button-:Rbmiqja:"
+                        onClick={toggleMenu}
                       >
                         Menu
                         <svg
@@ -72,9 +84,119 @@ export default function Header() {
                           ></path>
                         </svg>
                       </button>
+
+                      {isMenuOpen && (
+                        <>
+                          <div
+                            class="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-black/80"
+                            id="headlessui-popover-backdrop-:Rjmiqja:"
+                            aria-hidden="true"
+                          ></div>
+
+                          <div
+                            class="transition ease-in-out  fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 duration-150 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
+                            id="headlessui-popover-panel-:Rrmiqja:"
+                            tabindex="-1"
+                            // style="--button-width: 88.73333740234375px;"
+                            data-headlessui-state="open"
+                            data-open=""
+                          >
+                            <div class="flex flex-row-reverse items-center justify-between">
+                              <button
+                                aria-label="Close menu"
+                                class="-m-1 p-1"
+                                type="button"
+                                data-headlessui-state="open active"
+                                data-open=""
+                                data-active=""
+                                onClick={toggleMenu}
+                              >
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  aria-hidden="true"
+                                  class="h-6 w-6 text-zinc-500 "
+                                >
+                                  <path
+                                    d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></path>
+                                </svg>
+                              </button>
+                              <h2 class="text-sm font-medium text-zinc-600 ">
+                                Navigation
+                              </h2>
+                            </div>
+                            <nav class="mt-6">
+                              <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800  ">
+                                <li>
+                                  <Link
+                                    onClick={closeMenu}
+                                    class="block py-2"
+                                    data-headlessui-state="open active"
+                                    data-open=""
+                                    data-active=""
+                                    to="/about"
+                                  >
+                                    About
+                                  </Link>
+                                </li>
+                                {/* <li>
+                                  <a
+                                    class="block py-2"
+                                    data-headlessui-state="open active"
+                                    data-open=""
+                                    data-active=""
+                                    href="/articles"
+                                  >
+                                    Articles
+                                  </a>
+                                </li> */}
+                                <li>
+                                  <Link
+                                    onClick={closeMenu}
+                                    class="block py-2"
+                                    data-headlessui-state="open active"
+                                    data-open=""
+                                    data-active=""
+                                    to="/projects"
+                                  >
+                                    Projects
+                                  </Link>
+                                </li>
+                                {/* <li>
+                                  <a
+                                    class="block py-2"
+                                    data-headlessui-state="open active"
+                                    data-open=""
+                                    data-active=""
+                                    href="/speaking"
+                                  >
+                                    Speaking
+                                  </a>
+                                </li> */}
+                                {/* <li>
+                                  <a
+                                    class="block py-2"
+                                    data-headlessui-state="open active"
+                                    data-open=""
+                                    data-active=""
+                                    href="/uses"
+                                  >
+                                    Uses
+                                  </a>
+                                </li> */}
+                              </ul>
+                            </nav>
+                          </div>
+                        </>
+                      )}
                     </div>
                     <div
-                      hidden=""
+                      // hidden=""
                       style={{
                         position: "fixed",
                         top: "1px",
