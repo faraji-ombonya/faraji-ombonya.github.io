@@ -13,18 +13,12 @@ export default function Footer() {
                     <Link class="transition hover:text-teal-500" to="/about">
                       About
                     </Link>
+                    <Link class="transition hover:text-teal-500" to="/articles">
+                      Articles
+                    </Link>
                     <Link class="transition hover:text-teal-500" to="/projects">
                       Projects
                     </Link>
-                    {/* <a
-                        class="transition hover:text-teal-500"
-                        href="/speaking"
-                      >
-                        Speaking
-                      </a> */}
-                    {/* <a class="transition hover:text-teal-500" href="/uses">
-                        Uses
-                      </a> */}
                   </div>
                   <p class="text-sm text-zinc-400">
                     © Faraji Ombonya. All rights reserved.
