@@ -144,17 +144,18 @@ export default function Header() {
                                     About
                                   </Link>
                                 </li>
-                                {/* <li>
-                                  <a
+                                <li>
+                                  <Link
+                                    onClick={closeMenu}
                                     class="block py-2"
                                     data-headlessui-state="open active"
                                     data-open=""
                                     data-active=""
-                                    href="/articles"
+                                    to="/articles"
                                   >
                                     Articles
-                                  </a>
-                                </li> */}
+                                  </Link>
+                                </li>
                                 <li>
                                   <Link
                                     onClick={closeMenu}
@@ -227,10 +228,10 @@ export default function Header() {
                             )}
                           </Link>
                         </li>
-                        {/* <li>
+                        <li>
                           <Link
                             class={`relative block px-3 py-2 transition hover:text-teal-500  ${
-                              location.pathname == "/articles" &&
+                              location.pathname == "/projects" &&
                               "text-teal-500"
                             } `}
                             to="/articles"
@@ -240,7 +241,7 @@ export default function Header() {
                               <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span>
                             )}
                           </Link>
-                        </li> */}
+                        </li>
                         <li>
                           <Link
                             class={`relative block px-3 py-2 transition hover:text-teal-500  ${
