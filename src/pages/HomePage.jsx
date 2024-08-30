@@ -293,6 +293,7 @@ export default function HomePage() {
                       <li class="flex gap-4">
                         <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
                           <img
+                            className="rounded-full"
                             alt=""
                             loading="lazy"
                             width="32"
@@ -301,7 +302,7 @@ export default function HomePage() {
                             data-nimg="1"
                             class="h-7 w-7"
                             style={{ color: "transparent" }}
-                            src="/_next/static/media/planetaria.ecd81ade.svg"
+                            src="/sparepap.jpeg"
                           />
                         </div>
                         <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -335,7 +336,7 @@ export default function HomePage() {
                             data-nimg="1"
                             class="h-7 w-7"
                             style={{ color: "transparent" }}
-                            src="/_next/static/media/airbnb.b4000690.svg"
+                            src="/cropped-Original-Cintel-Logo.webp"
                           />
                         </div>
                         <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -369,7 +370,7 @@ export default function HomePage() {
                             data-nimg="1"
                             class="h-7 w-7"
                             style={{ color: "transparent" }}
-                            src="/_next/static/media/facebook.dd9e7d48.svg"
+                            src="/appinapp.webp"
                           />
                         </div>
                         <dl class="flex flex-auto flex-wrap gap-x-2">
@@ -395,6 +396,7 @@ export default function HomePage() {
                       <li class="flex gap-4">
                         <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
                           <img
+                            className="rounded-full"
                             alt=""
                             loading="lazy"
                             width="28"
@@ -403,7 +405,7 @@ export default function HomePage() {
                             data-nimg="1"
                             class="h-7 w-7"
                             style={{ color: "transparent" }}
-                            src="/_next/static/media/starbucks.4a5bd050.svg"
+                            src="/logo-bac2.png"
                           />
                         </div>
                         <dl class="flex flex-auto flex-wrap gap-x-2">
