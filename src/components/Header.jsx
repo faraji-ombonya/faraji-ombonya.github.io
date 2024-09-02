@@ -231,7 +231,7 @@ export default function Header() {
                         <li>
                           <Link
                             class={`relative block px-3 py-2 transition hover:text-teal-500  ${
-                              location.pathname == "/projects" &&
+                              location.pathname == "/articles" &&
                               "text-teal-500"
                             } `}
                             to="/articles"
