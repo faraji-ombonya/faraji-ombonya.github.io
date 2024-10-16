@@ -2,7 +2,7 @@ export default function Work() {
   const works = [
     {
       companyName: "Sparepap",
-      role: "Full Stack Engineer",
+      role: "Full Stack Software Engineer",
       startDateTime: "2023",
       startDateDisplay: "Dec 2023",
       endDateTime: "",
@@ -11,7 +11,7 @@ export default function Work() {
     },
     {
       companyName: "Cintelcore",
-      role: "Backend Engineer",
+      role: "Back-End Software Engineer (Part Time)",
       startDateTime: "2023",
       startDateDisplay: "Nov 2023",
       endDateTime: "2023",
@@ -20,7 +20,7 @@ export default function Work() {
     },
     {
       companyName: "EpicApp",
-      role: "Backend Engineer",
+      role: "Back-End Software Engineer",
       startDateTime: "2023",
       startDateDisplay: "Jun 2023",
       endDateTime: "2023",
