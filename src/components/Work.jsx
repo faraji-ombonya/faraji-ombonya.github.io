@@ -100,7 +100,7 @@ export default function Work() {
       <a
         target="blank"
         class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 /50      group mt-6 w-full"
-        href="https://drive.google.com/file/d/1FczHxnkd4ZngxZS4DD9HGpZLsLY9s0I1/view?usp=sharing"
+        href="https://docs.google.com/document/d/1M082yxrGS4b9d52GrI2y9Jp6BJ7KdINXc5jwTYZ4QzM/edit?usp=sharing"
       >
         Download CV
         <svg
