@@ -1,45 +1,8 @@
-export default function Work() {
-  const works = [
-    {
-      companyName: "Sparepap",
-      role: "Full Stack S.E.",
-      startDateTime: "2023",
-      startDateDisplay: "Dec 2023",
-      endDateTime: "",
-      endDateDisplay: "Present",
-      imageUrl: "/sparepap.jpeg",
-    },
-    {
-      companyName: "Cintelcore",
-      role: "Back-End S.E. (Part Time)",
-      startDateTime: "2023",
-      startDateDisplay: "Nov 2023",
-      endDateTime: "2023",
-      endDateDisplay: "Nov 2023",
-      imageUrl: "/cropped-Original-Cintel-Logo.webp",
-    },
-    {
-      companyName: "EpicApp",
-      role: "Back-End S.E.",
-      startDateTime: "2023",
-      startDateDisplay: "Jun 2023",
-      endDateTime: "2023",
-      endDateDisplay: "Oct 2023",
-      imageUrl: "/appinapp.webp",
-    },
-    {
-      companyName: "Bukura Agricultural College",
-      role: "Intern",
-      startDateTime: "2021",
-      startDateDisplay: "Nov 2021",
-      endDateTime: "2022",
-      endDateDisplay: "Jan 2022",
-      imageUrl: "/logo-bac2.png",
-    },
-  ];
+import { WORKS } from "../data/works";
 
+export default function Work() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 ">
         <svg
           viewBox="0 0 24 24"
@@ -62,9 +25,9 @@ export default function Work() {
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {works?.map((work, index) => (
+        {WORKS?.map((work, index) => (
           <li key={index} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <img
                 alt=""
                 loading="lazy"
@@ -99,7 +62,7 @@ export default function Work() {
       </ol>
       <a
         target="blank"
-        className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 /50      group mt-6 w-full"
+        className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
         href="https://docs.google.com/document/d/1M082yxrGS4b9d52GrI2y9Jp6BJ7KdINXc5jwTYZ4QzM/edit?usp=sharing"
       >
         Download CV

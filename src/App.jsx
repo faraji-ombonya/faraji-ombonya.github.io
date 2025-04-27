@@ -9,19 +9,17 @@ import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="articles" element={<ArticlesPage />} />
-            <Route path="articles/:slug" element={<ArticleDetailPage />} />
-            <Route path="projects" element={<ProjectsPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="articles" element={<ArticlesPage />} />
+          <Route path="articles/:slug" element={<ArticleDetailPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
