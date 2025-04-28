@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 import Work from "../components/Work";
-import { blogPosts } from "../data/blogPosts";
+import { BLOG_POSTS } from "../data/blogPosts";
 
 export default function HomePage() {
   return (
@@ -78,19 +80,19 @@ export default function HomePage() {
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                 <div className="flex flex-col gap-16">
-                  {blogPosts?.map((article) => (
+                  {BLOG_POSTS?.map((article) => (
                     <article
                       key={article?.url}
                       className="group relative flex flex-col items-start"
                     >
                       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                        <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl /50"></div>
-                        <a target="_blank" href={article?.url}>
+                        <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+                        <Link to={`/articles/${article?.slug}`}>
                           <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                           <span className="relative z-10">
                             {article?.title}
                           </span>
-                        </a>
+                        </Link>
                       </h2>
                       <time
                         className="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
