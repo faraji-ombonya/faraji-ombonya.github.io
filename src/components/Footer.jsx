@@ -12,6 +12,12 @@ export default function Footer() {
                   <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200 ">
                     <Link
                       className="transition hover:text-teal-500 dark:hover:text-teal-400"
+                      to="/"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      className="transition hover:text-teal-500 dark:hover:text-teal-400"
                       to="/about"
                     >
                       About
