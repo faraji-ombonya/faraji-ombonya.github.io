@@ -31,6 +31,11 @@ export const blogPosts = [
   },
 ];
 
+export const TITLE = "Writing on software engineering and the tech industry.";
+
+export const DESCRIPTION =
+  "My featured long-form thoughts on software engineering and related topics.";
+
 export const BLOG_POSTS = [
   {
     date: {
