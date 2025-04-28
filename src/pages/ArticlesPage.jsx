@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "../data/blogPosts";
 
 export default function ArticlesPage() {
-  
-
   return (
     <main className="flex-auto">
       <div className="sm:px-8 mt-16 sm:mt-32">
@@ -12,10 +10,10 @@ export default function ArticlesPage() {
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <header className="max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl ">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                   Writing on software engineering and the tech industry.
                 </h1>
-                <p className="mt-6 text-base text-zinc-600 ">
+                <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                   My featured long-form thoughts on software engineering and
                   related topics.
                 </p>
@@ -29,8 +27,8 @@ export default function ArticlesPage() {
                         className="md:grid md:grid-cols-4 md:items-baseline"
                       >
                         <div className="md:col-span-3 group relative flex flex-col items-start">
-                          <h2 className="text-base font-semibold tracking-tight text-zinc-800 ">
-                            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl "></div>
+                          <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                            <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
                             <Link to={`/articles/${article?.slug}`}>
                               <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                               <span className="relative z-10">
@@ -50,7 +48,7 @@ export default function ArticlesPage() {
                             </span>
                             {article?.date?.display}
                           </time>
-                          <p className="relative z-10 mt-2 text-sm text-zinc-600 ">
+                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                             {article?.description}
                           </p>
                           <div
@@ -74,7 +72,7 @@ export default function ArticlesPage() {
                           </div>
                         </div>
                         <time
-                          className="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 "
+                          className="mt-1 max-md:hidden relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500"
                           dateTime="2022-09-05"
                         >
                           {article?.date?.display}
