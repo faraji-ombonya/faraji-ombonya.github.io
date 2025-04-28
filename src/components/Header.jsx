@@ -14,6 +14,20 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const toggleLightScheme = () => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark")
+    } else if (theme === "light") {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark")
+    } else {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark")
+    }
+  };
+
   return (
     <header
       className="pointer-events-none relative z-50 flex flex-none flex-col"
@@ -262,6 +276,7 @@ export default function Header() {
                   <div className="flex justify-end md:flex-1">
                     <div className="pointer-events-auto">
                       <button
+                        onClick={toggleLightScheme}
                         type="button"
                         aria-label="Switch to dark theme"
                         className="group rounded-full bg-white/90 px-3 py-2 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20  "
